@@ -1,0 +1,15 @@
+<h1>New MBI Calculation</h1>
+
+<%= form_for @bmi_calculation do |f| %>
+  <div class="form-group">
+    <%= f.text_field :weight, class: 'form-control', placeholder: 'Your weight' %>
+    <small id="emailHelp" class="form-text text-muted">Please enter your weight in kilograms.</small>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :height, class: 'form-control', placeholder: 'Your height' %>
+    <small id="emailHelp" class="form-text text-muted">Please enter your height in meters.</small>
+  </div>
+
+  <%= f.submit 'Save', class: 'btn btn-primary' %>
+<% end %>

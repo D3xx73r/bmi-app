@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Weight</th>
+      <th scope="col">Height</th>
+      <th scope="col">BMI</th>
+      <th scope="col">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bmi_calculations.each do |bmi| %>
+      <tr>
+        <th scope="row"><%= bmi.id %></th>
+        <td><%= bmi.weight %></td>
+        <td><%= bmi.height %></td>
+        <td><%= bmi.calculate_bmi %></td>
+        <td><%= category_message(bmi) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
